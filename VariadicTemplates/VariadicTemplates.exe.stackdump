@@ -1,0 +1,7 @@
+Exception: STATUS_STACK_OVERFLOW at eip=6110FDCA
+eax=20061170 ebx=20061170 ecx=00000000 edx=00640000 esi=00443054 edi=00443058
+ebp=00000000 esp=00443000 program=C:\Users\Gerd\DevProjects\Cpp\GrundlagenCpp\VariadicTemplates\Debug\VariadicTemplates.exe, pid 2184, thread unknown (0x2418)
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+End of stack trace
