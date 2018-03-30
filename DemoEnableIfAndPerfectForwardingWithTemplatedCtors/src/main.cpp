@@ -11,6 +11,9 @@
 #include <memory>
 using namespace std;
 
+/**	replaces std::make_unique to see how ...arg
+ 	is substituted and how ...Arg is deduced
+ */
 template<class T, class ...Arg>
 std::unique_ptr<T> makeUnique(Arg&& ...arg){
 	std::cout << __PRETTY_FUNCTION__ << std::endl;
