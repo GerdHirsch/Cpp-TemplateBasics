@@ -26,10 +26,10 @@ void demoMakeShared();
 int main(){
 	cout << "=== Hello SmartPointer" << endl;
 //	demoSharedToConst();
-//	demoSharedConvertierungAB();
+	demoSharedConvertierungAB();
 //	demoSharedPointer();
 //	demoUniquePointer();
-	demoMakeUnique();
+//	demoMakeUnique();
 //	demoMakeShared();
 //	demoSharedPointerBadAlloc();
 

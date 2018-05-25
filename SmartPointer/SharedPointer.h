@@ -149,6 +149,8 @@ public:
 		// if(this == &src) return *this;
 
 		// standard handle the same Resource
+		// already the same Resource
+		if(this->resource == rhs.resource)	return *this;
 
 		Delete();
 		resource = rhs.resource;
@@ -169,13 +171,6 @@ public:
 	explicit
 	operator bool(){ return resource != nullptr; }
 
-	T* release() {
-		T* retVal = resource;
-		resource = nullptr;
-		Delete();
-		counter = nullptr;
-		return retVal;
-	}
 	Counter* getCounter() const {return counter;}
 private:
 	void Delete(){
@@ -190,7 +185,7 @@ private:
 		}
 
 	}
-	T* resource;
+	T *resource;
 	Counter *counter;
 };
 template<class T, class ...ParamTypes>
