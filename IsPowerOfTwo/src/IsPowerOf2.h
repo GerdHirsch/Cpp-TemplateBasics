@@ -29,8 +29,15 @@ struct countOnesImpl{
 };
 
 template<size_t value>
-size_t countOnes = countOnesImpl<value>::value;
+constexpr size_t countOnes = countOnesImpl<value>::value;
 
+template<size_t val>
+struct IsPowerOfTwoImpl{
+	static constexpr bool value = countOnes<val> == 1;
+//	static constexpr bool value = countOnesImpl<val>::value == 1;
+};
+template<size_t value>
+bool IsPowerOfTwo = IsPowerOfTwoImpl<value>::value;
 
 constexpr std::size_t countNumberOfOnes(std::size_t value){
 	std::size_t numOnes{0};
@@ -43,7 +50,7 @@ constexpr std::size_t countNumberOfOnes(std::size_t value){
 }
 constexpr bool isPowerOfTwo(std::size_t value){
 	return countNumberOfOnes(value) == 1;
-//	return countOnes<value>::value;
+//	return countOnes<value> == 1;
 }
 
 

@@ -39,6 +39,12 @@ int main(){
 	cout << "isPowerOfTwo(2):" << isPowerOfTwo(2) << endl;
 	cout << "isPowerOfTwo(3):" << isPowerOfTwo(3) << endl;
 	cout << "isPowerOfTwo(8):" << isPowerOfTwo(8) << endl;
+	cout << endl;
+	cout << boolalpha;
+	cout << "IsPowerOfTwo<1>:" << IsPowerOfTwo<1> << endl;
+	cout << "IsPowerOfTwo<2>:" << IsPowerOfTwo<2> << endl;
+	cout << "IsPowerOfTwo<3>:" << IsPowerOfTwo<3> << endl;
+	cout << "IsPowerOfTwo<8>:" << IsPowerOfTwo<8> << endl;
 
 }
 
