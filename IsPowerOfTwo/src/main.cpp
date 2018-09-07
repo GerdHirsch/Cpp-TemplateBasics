@@ -27,5 +27,18 @@ int main(){
 	cout << "3: " << countOnes<3> << endl;
 	cout << "8: " << countOnes<8> << endl;
 
+	cout << endl;
+	cout << "1: " << countNumberOfOnes(1) << endl;
+	cout << "2: " << countNumberOfOnes(2) << endl;
+	cout << "3: " << countNumberOfOnes(3) << endl;
+	cout << "8: " << countNumberOfOnes(8) << endl;
+
+	cout << endl;
+	cout << boolalpha;
+	cout << "isPowerOfTwo(1):" << isPowerOfTwo(1) << endl;
+	cout << "isPowerOfTwo(2):" << isPowerOfTwo(2) << endl;
+	cout << "isPowerOfTwo(3):" << isPowerOfTwo(3) << endl;
+	cout << "isPowerOfTwo(8):" << isPowerOfTwo(8) << endl;
+
 }
 
