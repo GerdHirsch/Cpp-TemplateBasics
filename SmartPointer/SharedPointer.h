@@ -75,7 +75,9 @@ public:
 	 * und kann auf die privaten Member  von SmartPointer<U> zugreifen
 	 */
 	template<class Z>
-	friend class SharedPointer<T>;
+	friend class SharedPointer; // same as SharedPointer<T>
+//	friend class SharedPointer<T>;
+
 	/**
 	 * konvertierungskonstruktor von Derived nach Base
 	 * nur zuweisungskompatible Typen sind möglich
@@ -148,8 +150,7 @@ public:
 		// selfassignment not possible
 		// if(this == &src) return *this;
 
-		// standard handle the same Resource
-		// already the same Resource
+		// already the same Resource but different pointertypes
 		if(this->resource == rhs.resource)	return *this;
 
 		Delete();
@@ -168,10 +169,9 @@ public:
 	// Pointer Interface
 	T* operator->() const { return resource; }
 	T& operator*(){ return *resource; }
-	explicit
+	explicit // Ausnahme: operator bool & explicit bei if(Cond)
 	operator bool(){ return resource != nullptr; }
 
-	Counter* getCounter() const {return counter;}
 private:
 	void Delete(){
 		if(!counter) return;
