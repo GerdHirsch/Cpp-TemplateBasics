@@ -15,6 +15,9 @@ using namespace std;
 /*
  * This project demonstrates the use of dynamic and static polymorphism
  * and how static polymorphism can be dynamised.
+ * It is only a sketch of how it works.
+ * All objects are on the stack.
+ * In real projects, the lifetime of the objects must be taken into account.
  */
 int main(){
 	cout << "DynamicVSStaticPolymophism" << endl;
