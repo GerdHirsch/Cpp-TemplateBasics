@@ -23,7 +23,7 @@ public:
 	// Copy illegal
 	// copy operations werden nicht generiert wenn
 	// move operations vorhanden sind
-	// => delete ist überflüssig
+	// => delete ist ï¿½berflï¿½ssig
 //	UniquePointer(UniquePointer<T> const&) = delete;
 //	UniquePointer& operator=(UniquePointer<T> const&) = delete;
 
@@ -40,7 +40,7 @@ public:
 		resource = src.release();
 		return *this;
 	}
-
+	// Conversion Operations
 	template<class U>
 	explicit
 	UniquePointer(UniquePointer<U>&& src) : resource(src.release()) {
