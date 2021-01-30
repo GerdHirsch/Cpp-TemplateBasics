@@ -20,6 +20,8 @@ public:
  * With a simple adapter, as outlined here,
  * static polymorphism can be subsequently dynamised if required
  * without greater overhead than with "normal" dynamic polymorphism.
+ * The implementation is non-invasive,
+ * i.e. the existing classes do not have to be adapted.
  */
 template<class Environment>
 class Adapter : public Base{
