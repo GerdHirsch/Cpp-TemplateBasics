@@ -12,7 +12,10 @@ void demoStaticDynamicMix();
 
 #include <iostream>
 using namespace std;
-
+/*
+ * This project demonstrates the use of dynamic and static polymorphism
+ * and how static polymorphism can be dynamised.
+ */
 int main(){
 	cout << "DynamicVSStaticPolymophism" << endl;
 	demoDynamic();

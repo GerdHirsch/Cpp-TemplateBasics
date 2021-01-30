@@ -16,7 +16,19 @@ class Base{
 public:
 	virtual void operation() = 0;
 };
-
+/*
+ * A component is only responsible for one thing (SRP).
+ * It delegates everything else to its environment.
+ * In dynamic polymorphism, this is typically represented by an abstract base class
+ * and defined from the component's point of view!
+ * A user of the component must provide the environment,
+ * i.e. an implementation of the base class.
+ * The implementations are typically defined in other namespaces
+ * and not, as in this example, in the same namespace as the component.
+ *
+ * With dynamic polymorphism, different configurations of the environment as well
+ * as completely different implementations can be exchanged at runtime.
+ */
 class Component{
 public:
 	Component(Base *environment) : environment(environment){}

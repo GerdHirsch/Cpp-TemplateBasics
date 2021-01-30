@@ -16,7 +16,11 @@ class Base{
 public:
 	virtual void operation() = 0;
 };
-
+/*
+ * With a simple adapter, as outlined here,
+ * static polymorphism can be subsequently dynamised if required
+ * without greater overhead than with "normal" dynamic polymorphism.
+ */
 template<class Environment>
 class Adapter : public Base{
 public:
