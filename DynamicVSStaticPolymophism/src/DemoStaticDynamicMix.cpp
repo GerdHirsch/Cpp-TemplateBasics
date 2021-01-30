@@ -31,7 +31,7 @@ void demoStaticDynamicMix(){
 	auto component = createComponent(&adapter1_1);
 	component.doSomething();
 
-	// use component1 with BaseImpl1 configuration 1_2
+	// use component with BaseImpl1 configuration 1_2
 	BaseImpl1 environment1_2("No 1_2");
 	auto adapter1_2 = createAdapter(&environment1_2);
 	component.setEnvironment(&adapter1_2);
