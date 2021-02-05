@@ -12,7 +12,7 @@
 
 namespace Dynamic{
 
-class Base{
+class Environment{
 public:
 	virtual void operation() = 0;
 };
@@ -31,20 +31,20 @@ public:
  */
 class Component{
 public:
-	Component(Base *environment) : environment(environment){}
+	Component(Environment *environment) : environment(environment){}
 
 	void doSomething(){
 		std::cout << __PRETTY_FUNCTION__ << std::endl;
 		environment->operation();
 	}
-	void setEnvironment(Base *environment){ this->environment = environment; }
+	void setEnvironment(Environment *environment){ this->environment = environment; }
 private:
-	Base *environment;
+	Environment *environment;
 };
 
-class BaseImpl1 : public Base {
+class EnvironmentImpl_1 : public Environment {
 public:
-	BaseImpl1(std::string const& name):name(name){}
+	EnvironmentImpl_1(std::string const& name):name(name){}
 
 	void operation() override {
 		std::cout << __PRETTY_FUNCTION__ << ": " << name <<  std::endl;
@@ -53,9 +53,9 @@ private:
 	std::string name;
 };
 
-class BaseImpl2 : public Base {
+class EnvironmentImpl_2 : public Environment {
 public:
-	BaseImpl2(std::string const& name):name(name){}
+	EnvironmentImpl_2(std::string const& name):name(name){}
 	void operation() override {
 		std::cout << __PRETTY_FUNCTION__ << ": " << name <<  std::endl;
 	}
@@ -64,7 +64,7 @@ private:
 };
 
 inline
-Component createComponent(Base* environment){ return Component(environment);}
+Component createComponent(Environment* environment){ return Component(environment);}
 
 }//end namespace Dynamic
 #endif /* DYNAMICPOLYMORPHISM_HPP_ */

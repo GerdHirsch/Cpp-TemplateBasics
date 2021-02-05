@@ -44,9 +44,9 @@ private:
 	Environment *environment;
 };
 
-class BaseImpl1 {
+class EnvironmentImpl_1 {
 public:
-	BaseImpl1(std::string const& name):name(name){}
+	EnvironmentImpl_1(std::string const& name):name(name){}
 	void operation() {
 		std::cout << __PRETTY_FUNCTION__ << ": " << name << std::endl;
 	}
@@ -54,9 +54,9 @@ private:
 	std::string name;
 };
 
-class BaseImpl2 {
+class EnvironmentImpl_2 {
 public:
-	BaseImpl2(std::string const& name):name(name){}
+	EnvironmentImpl_2(std::string const& name):name(name){}
 	void operation() {
 		std::cout << __PRETTY_FUNCTION__ << ": " << name << std::endl;
 	}
