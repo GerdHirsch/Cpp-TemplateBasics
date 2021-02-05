@@ -12,7 +12,7 @@
 #include <iostream>
 
 namespace Static{
-class Base{
+class AbstractEnvironment{
 public:
 	virtual void operation() = 0;
 };
@@ -24,7 +24,7 @@ public:
  * i.e. the existing classes do not have to be adapted.
  */
 template<class Environment>
-class Adapter : public Base{
+class Adapter : public AbstractEnvironment{
 public:
 	Adapter(Environment* environment): environment(environment){}
 	void operation() override {
@@ -40,8 +40,8 @@ Adapter<Environment> createAdapter(Environment* environment){
 	return Adapter<Environment>(environment);
 }
 template<class Environment>
-Component<Base> createComponent(Adapter<Environment> *adapter){
-	return Component<Base>(adapter);
+Component<AbstractEnvironment> createComponent(Adapter<Environment> *adapter){
+	return Component<AbstractEnvironment>(adapter);
 }
 
 }// end of namespace Static
