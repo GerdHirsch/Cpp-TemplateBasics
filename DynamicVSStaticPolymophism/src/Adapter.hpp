@@ -39,6 +39,9 @@ template<class Environment>
 Adapter<Environment> createAdapter(Environment* environment){
 	return Adapter<Environment>(environment);
 }
+/*
+ This overload ensures that a component is instantiated with AbstractEnvironment when an adapter is passed
+ */
 template<class Environment>
 Component<AbstractEnvironment> createComponent(Adapter<Environment> *adapter){
 	return Component<AbstractEnvironment>(adapter);
