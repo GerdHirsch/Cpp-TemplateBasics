@@ -30,3 +30,12 @@ void demoDynamic(){
 	component.setEnvironment(&environment2_1);
 	component.doSomething();
 }
+/* output
+void demoDynamic()
+void Dynamic::Component::doSomething()
+virtual void Dynamic::EnvironmentImpl_1::operation(): No. 1_1
+void Dynamic::Component::doSomething()
+virtual void Dynamic::EnvironmentImpl_1::operation(): No. 1_2
+void Dynamic::Component::doSomething()
+virtual void Dynamic::EnvironmentImpl_2::operation(): No. 2_1
+ */

@@ -38,5 +38,14 @@ void demoStatic(){
 //	component1.setEnvironment(&environment2_1);
 
 }
+/* output
+void demoStatic()
+void Static::Component<Environment>::doSomething() [with Environment = Static::EnvironmentImpl_1]
+void Static::EnvironmentImpl_1::operation(): No 1_1
+void Static::Component<Environment>::doSomething() [with Environment = Static::EnvironmentImpl_1]
+void Static::EnvironmentImpl_1::operation(): No 1_2
+void Static::Component<Environment>::doSomething() [with Environment = Static::EnvironmentImpl_2]
+void Static::EnvironmentImpl_2::operation(): No 2_1
+ */
 
 

@@ -21,9 +21,13 @@ using namespace std;
  */
 int main(){
 	cout << "DynamicVSStaticPolymophism" << endl;
+	cout << "========================================================" << endl;
 	demoDynamic();
+	cout << "========================================================" << endl;
 	demoStatic();
+	cout << "========================================================" << endl;
 	demoStaticDynamicMix();
+	cout << "========================================================" << endl;
 
 }
 

@@ -26,7 +26,7 @@ void demoStaticDynamicMix(){
 
 	cout << __PRETTY_FUNCTION__ << endl;
 	// use component with EnvironmentImpl_1 configuration 1_1
-	Static::EnvironmentImpl_1 environment1_1("No 1_1");
+	EnvironmentImpl_1 environment1_1("No 1_1");
 	auto adapter1_1 = createAdapter(&environment1_1);
 	auto component = createComponent(&adapter1_1);
 	component.doSomething();
@@ -44,5 +44,17 @@ void demoStaticDynamicMix(){
 	component.doSomething();
 
 }
+/* output
+void demoStaticDynamicMix()
+void Static::Component<Environment>::doSomething() [with Environment = Static::AbstractEnvironment]
+void Static::Adapter<Environment>::operation() [with Environment = Static::EnvironmentImpl_1]
+void Static::EnvironmentImpl_1::operation(): No 1_1
+void Static::Component<Environment>::doSomething() [with Environment = Static::AbstractEnvironment]
+void Static::Adapter<Environment>::operation() [with Environment = Static::EnvironmentImpl_1]
+void Static::EnvironmentImpl_1::operation(): No 1_2
+void Static::Component<Environment>::doSomething() [with Environment = Static::AbstractEnvironment]
+void Static::Adapter<Environment>::operation() [with Environment = Static::EnvironmentImpl_2]
+void Static::EnvironmentImpl_2::operation(): No 2_1
+ */
 
 
