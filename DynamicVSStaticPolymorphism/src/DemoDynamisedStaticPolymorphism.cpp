@@ -22,7 +22,13 @@ using namespace std;
  * because the methods are inline. Only the adapter methods are virtual.
  *
 */
-void demoStaticDynamicMix(){
+
+void demoDynamisedStaticPolimorphism();
+int main(){
+ demoDynamisedStaticPolimorphism();
+
+}
+void demoDynamisedStaticPolimorphism(){
 
 	cout << __PRETTY_FUNCTION__ << endl;
 	// use component with EnvironmentImpl_1 configuration 1_1

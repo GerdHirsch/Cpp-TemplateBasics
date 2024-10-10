@@ -11,6 +11,10 @@ using namespace Dynamic;
 #include <iostream>
 using namespace std;
 
+void demoDynamic();
+int main(){
+	demoDynamic();
+}
 
 void demoDynamic(){
 	cout << __PRETTY_FUNCTION__ << endl;

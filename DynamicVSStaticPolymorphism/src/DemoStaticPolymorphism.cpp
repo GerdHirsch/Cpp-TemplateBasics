@@ -12,6 +12,10 @@ using namespace Static;
 #include <iostream>
 using namespace std;
 
+void demoStatic();
+int main(){
+	demoStatic();
+}
 void demoStatic(){
 
 	cout << __PRETTY_FUNCTION__ << endl;
