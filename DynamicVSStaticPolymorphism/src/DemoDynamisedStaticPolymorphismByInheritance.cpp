@@ -5,8 +5,8 @@
  *      Author: Gerd
  */
 
-#include "Adapter.hpp"
-#include "StaticPolymorphism.hpp"
+#include "AdapterByInheritance.hpp"
+
 using namespace Static;
 
 #include <iostream>
@@ -24,31 +24,31 @@ using namespace std;
  *
 */
 
-void demoDynamisedStaticPolimorphism();
+void demoDynamisedStaticPolimorphismByInheritance();
 int main(){
- demoDynamisedStaticPolimorphism();
+ demoDynamisedStaticPolimorphismByInheritance();
 
 }
-void demoDynamisedStaticPolimorphism(){
+void demoDynamisedStaticPolimorphismByInheritance(){
 
 	cout << __PRETTY_FUNCTION__ << endl;
 	// use component with EnvironmentImpl_1 configuration 1_1
 	EnvironmentImpl_1 environment1_1("No 1_1");
-	auto adapter1_1 = createAdapter(&environment1_1);
+	auto adapter1_1 = createAdapter<EnvironmentImpl_1>(environment1_1);
 	auto component = createComponent(&adapter1_1);
 	component.doSomething();
 
 	// use component with EnvironmentImpl_1 configuration 1_2
 	EnvironmentImpl_1 environment1_2("No 1_2");
-	auto adapter1_2 = createAdapter(&environment1_2);
+	auto adapter1_2 = createAdapter(environment1_2);
 	component.setEnvironment(&adapter1_2);
 	component.doSomething();
 
 	// use component with EnvironmentImpl_2 configuration 2_1
-	EnvironmentImpl_2 environment2_1("No 2_1");
-	auto adapter2_1 = createAdapter(&environment2_1);
-	component.setEnvironment(&adapter2_1);
-	component.doSomething();
+	// EnvironmentImpl_2 environment2_1("No 2_1");
+	// auto adapter2_1 = createAdapter(environment2_1);
+	// component.setEnvironment(&adapter2_1);
+	// component.doSomething();
 
 }
 /* output

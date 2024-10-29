@@ -19,3 +19,8 @@ set(DYNAMISED_TARGET DynamisedStaticPolimorphy)
 
 add_executable( ${DYNAMISED_TARGET} ${CMAKE_SOURCE_DIR}/DynamicVSStaticPolymorphism/src/DemoDynamisedStaticPolymorphism.cpp )
 target_link_libraries(${DYNAMISED_TARGET} )
+
+set(DYNAMISED_BY_INHERITANCE_TARGET DynamisedStaticPolimorphyByInheritance)
+
+add_executable( ${DYNAMISED_BY_INHERITANCE_TARGET} ${CMAKE_SOURCE_DIR}/DynamicVSStaticPolymorphism/src/DemoDynamisedStaticPolymorphismByInheritance.cpp )
+target_link_libraries(${DYNAMISED_BY_INHERITANCE_TARGET} )
